@@ -30,5 +30,3 @@ class App(Tk):
         self.loginFrame.pack()
 
 
-App()
-
