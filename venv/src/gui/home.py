@@ -24,12 +24,12 @@ def change_lights(room, button):
 
 
 def heat_up(room, label):
-    room.temperature += 1
+    room.temperature += 0.5
     label['text'] = str(room.temperature)+"\u00b0" + "C"
 
 
 def heat_down(room, label):
-    room.temperature -= 1
+    room.temperature -= 0.5
     label['text'] = str(room.temperature)+"\u00b0" + "C"
 
 
@@ -54,12 +54,12 @@ class Home(Frame):
     def init_window(self):
         self.master.title("SH Control")
         logout = Button(self, text="Logout", command=self.master.logout)
-        logout.grid(row=0, column=3, sticky="NE")
+        logout.grid(row=0, column=1, sticky="NE")
         self.active_room_name = StringVar()
         self.active_room_name.set(self.rooms[0].name)
         rooms_dropdown = OptionMenu(self, self.active_room_name, *[room.name for room in self.rooms])
         self.active_room_name.trace("w", callback=self.callback)
-        rooms_dropdown.grid(row=0, column=0, columnspan=3)
+        rooms_dropdown.grid(row=0, column=0)
 
         self.active_room = self.rooms[0]
         self.active_room_label = Label(self, text=self.active_room.name)
@@ -77,25 +77,27 @@ class Home(Frame):
         self.set_icons()
 
     def set_icons(self):
-        alarm = Button(self, image=self.active_room.opts.alarm_img,
-                       command=lambda: change_alarm(self.active_room, alarm))
-        alarm.grid(row=2, column=0)
+        lights = Button(self, image=self.active_room.opts.lights_img,
+                        command=lambda: change_lights(self.active_room, lights))
+        lights.grid(row=2, column=0)
+
         blinds = Button(self, image=self.active_room.opts.blinds_img,
                         command=lambda: change_blinds(self.active_room, blinds))
         blinds.grid(row=2, column=1)
         door = Button(self, image=self.active_room.opts.door_img, command=lambda: change_door(self.active_room, door))
         door.grid(row=3, column=1)
-        lights = Button(self, image=self.active_room.opts.lights_img,
-                        command=lambda: change_lights(self.active_room, lights))
-        lights.grid(row=3, column=0)
+
+        alarm = Button(self, image=self.active_room.opts.alarm_img,
+                       command=lambda: change_alarm(self.active_room, alarm))
+        alarm.grid(row=3, column=0)
 
         temperature = Label(self, text=(str(self.active_room.temperature)+"\u00b0" + "C"), font=("System", 25))
-        temperature.grid(row=2, rowspan=2, column=3)
+        temperature.grid(row=4, rowspan=2, column=1)
 
         heat_plus = Button(self, image=self.active_room.opts.heat_up,
                            command=lambda: heat_up(self.active_room, temperature))
-        heat_plus.grid(row=2, column=2)
+        heat_plus.grid(row=4, column=0)
         heat_minus = Button(self, image=self.active_room.opts.heat_down,
                             command=lambda: heat_down(self.active_room, temperature))
-        heat_minus.grid(row=3, column=2)
+        heat_minus.grid(row=5, column=0)
 

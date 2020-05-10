@@ -26,21 +26,21 @@ class RoomOptions:
     lights_areoff = False
 
     def __init__(self):
-        self.alarm_off = ImageTk.PhotoImage(Image.open("gui/img/alarm_off.png").resize((64, 64), Image.ANTIALIAS))
-        self.alarm_on = ImageTk.PhotoImage(Image.open("gui/img/alarm_on.png").resize((64, 64), Image.ANTIALIAS))
-        self.blinds_down = ImageTk.PhotoImage(Image.open("gui/img/blinds_down.png").resize((64, 64), Image.ANTIALIAS))
-        self.blinds_up = ImageTk.PhotoImage(Image.open("gui/img/blinds_up.png").resize((64, 64), Image.ANTIALIAS))
-        self.door_locked = ImageTk.PhotoImage(Image.open("gui/img/door_locked.png").resize((64, 64), Image.ANTIALIAS))
-        self.door_unlocked = ImageTk.PhotoImage(Image.open("gui/img/door_unlocked.png").resize((64, 64), Image.ANTIALIAS))
-        self.lights_off = ImageTk.PhotoImage(Image.open("gui/img/lights_off.png").resize((64, 64), Image.ANTIALIAS))
-        self.lights_on = ImageTk.PhotoImage(Image.open("gui/img/lights_on.png").resize((64, 64), Image.ANTIALIAS))
+        self.alarm_off = ImageTk.PhotoImage(Image.open("../gui/img/alarm_off.png").resize((64, 64), Image.ANTIALIAS))
+        self.alarm_on = ImageTk.PhotoImage(Image.open("../gui/img/alarm_on.png").resize((64, 64), Image.ANTIALIAS))
+        self.blinds_down = ImageTk.PhotoImage(Image.open("../gui/img/blinds_down.png").resize((64, 64), Image.ANTIALIAS))
+        self.blinds_up = ImageTk.PhotoImage(Image.open("../gui/img/blinds_up.png").resize((64, 64), Image.ANTIALIAS))
+        self.door_locked = ImageTk.PhotoImage(Image.open("../gui/img/door_locked.png").resize((64, 64), Image.ANTIALIAS))
+        self.door_unlocked = ImageTk.PhotoImage(Image.open("../gui/img/door_unlocked.png").resize((64, 64), Image.ANTIALIAS))
+        self.lights_off = ImageTk.PhotoImage(Image.open("../gui/img/lights_off.png").resize((64, 64), Image.ANTIALIAS))
+        self.lights_on = ImageTk.PhotoImage(Image.open("../gui/img/lights_on.png").resize((64, 64), Image.ANTIALIAS))
         self.alarm_img = self.alarm_off
         self.blinds_img = self.blinds_down
         self.door_img = self.door_unlocked
         self.lights_img = self.lights_on
 
-        self.heat_down = ImageTk.PhotoImage(Image.open("gui/img/heat_down.png").resize((64, 64), Image.ANTIALIAS))
-        self.heat_up = ImageTk.PhotoImage(Image.open("gui/img/heat_up.png").resize((64, 64), Image.ANTIALIAS))
+        self.heat_down = ImageTk.PhotoImage(Image.open("../gui/img/heat_down.png").resize((64, 64), Image.ANTIALIAS))
+        self.heat_up = ImageTk.PhotoImage(Image.open("../gui/img/heat_up.png").resize((64, 64), Image.ANTIALIAS))
 
     def change_alarm(self):
         if self.alarm_ison:
