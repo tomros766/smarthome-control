@@ -1,0 +1,102 @@
+[
+	{
+		"name": "all",
+		"buttons": [
+			{
+				"name": "lights",
+				"position": 1,
+				"topic": "/home/all/lights",
+				"binary": true,
+				"message_one": "on",
+				"message_two": "off"
+			},
+			{
+				"name": "temperature",
+				"position": 2,
+				"topic": "/home/all/temp",
+				"binary": false,
+				"message_one": "up",
+				"message_two": "down"
+			}
+		]
+	},
+	{
+		"name": "room1",
+		"buttons": [
+			{
+				"name": "lights",
+				"position": 1,
+				"topic": "/home/room1/lights",
+				"binary": true,
+				"message_one": "on",
+				"message_two": "off"
+			},
+			{
+				"name": "temperature",
+				"position": 2,
+				"topic": "/home/room1/temp",
+				"binary": false,
+				"message_one": "up",
+				"message_two": "down"
+			}
+		]
+	},
+	{
+		"name": "room2",
+		"buttons": [
+			{
+				"name": "lights",
+				"position": 1,
+				"topic": "/home/room1/lights",
+				"binary": true,
+				"message_one": "on",
+				"message_two": "off"
+			},
+			{
+				"name": "curtains",
+				"position": 2,
+				"topic": "/home/room2/curtains",
+				"binary": true,
+				"message_one": "on",
+				"message_two": "off"
+			},
+			{
+				"name": "button3",
+				"position": 3,
+				"topic": "/home/room2/but3",
+				"binary": true,
+				"message_one": "up",
+				"message_two": "down"
+			}
+		]
+	},
+	{
+		"name": "room3",
+		"buttons": [
+			{
+				"name": "button1",
+				"position": 1,
+				"topic": "/home/room3/but1",
+				"binary": true,
+				"message_one": "on",
+				"message_two": "off"
+			},
+			{
+				"name": "button2",
+				"position": 2,
+				"topic": "/home/room3/but2",
+				"binary": true,
+				"message_one": "on",
+				"message_two": "off"
+			},
+			{
+				"name": "button3",
+				"position": 3,
+				"topic": "/home/room3/but3",
+				"binary": false,
+				"message_one": "up",
+				"message_two": "down"
+			}
+		]
+	}
+]
