@@ -3,7 +3,6 @@ from PIL import Image, ImageTk
 import os
 
 
-
 class RoomOptions:
     active_room = None
     alarm_off = None
@@ -30,21 +29,31 @@ class RoomOptions:
     def __init__(self):
         THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
-        self.alarm_off = ImageTk.PhotoImage(Image.open(os.path.join(THIS_FOLDER, "img/alarm_off.png")).resize((64, 64), Image.ANTIALIAS))
-        self.alarm_on = ImageTk.PhotoImage(Image.open(os.path.join(THIS_FOLDER, "img/alarm_on.png")).resize((64, 64), Image.ANTIALIAS))
-        self.blinds_down = ImageTk.PhotoImage(Image.open(os.path.join(THIS_FOLDER, "img/blinds_down.png")).resize((64, 64), Image.ANTIALIAS))
-        self.blinds_up = ImageTk.PhotoImage(Image.open(os.path.join(THIS_FOLDER, "img/blinds_up.png")).resize((64, 64), Image.ANTIALIAS))
-        self.door_locked = ImageTk.PhotoImage(Image.open(os.path.join(THIS_FOLDER, "img/door_locked.png")).resize((64, 64), Image.ANTIALIAS))
-        self.door_unlocked = ImageTk.PhotoImage(Image.open(os.path.join(THIS_FOLDER, "img/door_unlocked.png")).resize((64, 64), Image.ANTIALIAS))
-        self.lights_off = ImageTk.PhotoImage(Image.open(os.path.join(THIS_FOLDER, "img/lights_off.png")).resize((64, 64), Image.ANTIALIAS))
-        self.lights_on = ImageTk.PhotoImage(Image.open(os.path.join(THIS_FOLDER, "img/lights_on.png")).resize((64, 64), Image.ANTIALIAS))
+        self.alarm_off = ImageTk.PhotoImage(
+            Image.open(os.path.join(THIS_FOLDER, "img/alarm_off.png")).resize((64, 64), Image.ANTIALIAS))
+        self.alarm_on = ImageTk.PhotoImage(
+            Image.open(os.path.join(THIS_FOLDER, "img/alarm_on.png")).resize((64, 64), Image.ANTIALIAS))
+        self.blinds_down = ImageTk.PhotoImage(
+            Image.open(os.path.join(THIS_FOLDER, "img/blinds_down.png")).resize((64, 64), Image.ANTIALIAS))
+        self.blinds_up = ImageTk.PhotoImage(
+            Image.open(os.path.join(THIS_FOLDER, "img/blinds_up.png")).resize((64, 64), Image.ANTIALIAS))
+        self.door_locked = ImageTk.PhotoImage(
+            Image.open(os.path.join(THIS_FOLDER, "img/door_locked.png")).resize((64, 64), Image.ANTIALIAS))
+        self.door_unlocked = ImageTk.PhotoImage(
+            Image.open(os.path.join(THIS_FOLDER, "img/door_unlocked.png")).resize((64, 64), Image.ANTIALIAS))
+        self.lights_off = ImageTk.PhotoImage(
+            Image.open(os.path.join(THIS_FOLDER, "img/lights_off.png")).resize((64, 64), Image.ANTIALIAS))
+        self.lights_on = ImageTk.PhotoImage(
+            Image.open(os.path.join(THIS_FOLDER, "img/lights_on.png")).resize((64, 64), Image.ANTIALIAS))
         self.alarm_img = self.alarm_off
         self.blinds_img = self.blinds_down
         self.door_img = self.door_unlocked
         self.lights_img = self.lights_on
 
-        self.heat_down = ImageTk.PhotoImage(Image.open(os.path.join(THIS_FOLDER, "img/heat_down.png")).resize((64, 64), Image.ANTIALIAS))
-        self.heat_up = ImageTk.PhotoImage(Image.open(os.path.join(THIS_FOLDER, "img/heat_up.png")).resize((64, 64), Image.ANTIALIAS))
+        self.heat_down = ImageTk.PhotoImage(
+            Image.open(os.path.join(THIS_FOLDER, "img/heat_down.png")).resize((64, 64), Image.ANTIALIAS))
+        self.heat_up = ImageTk.PhotoImage(
+            Image.open(os.path.join(THIS_FOLDER, "img/heat_up.png")).resize((64, 64), Image.ANTIALIAS))
 
     def change_alarm(self):
         if self.alarm_ison:
@@ -77,12 +86,3 @@ class RoomOptions:
         else:
             self.lights_areoff = True
             self.lights_img = self.lights_off
-
-
-
-
-
-
-
-
-
