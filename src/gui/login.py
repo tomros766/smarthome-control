@@ -1,3 +1,6 @@
+# author: Tomasz Rosiek
+# e-mail: trosiek@student.agh.edu.pl
+
 from tkinter import *
 
 

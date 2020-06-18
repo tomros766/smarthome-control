@@ -47,7 +47,7 @@
 			{
 				"name": "lights",
 				"position": 1,
-				"topic": "/home/room1/lights",
+				"topic": "/home/room2/lights",
 				"binary": true,
 				"message_one": "on",
 				"message_two": "off"
@@ -57,8 +57,8 @@
 				"position": 2,
 				"topic": "/home/room2/curtains",
 				"binary": true,
-				"message_one": "on",
-				"message_two": "off"
+				"message_one": "up",
+				"message_two": "down"
 			},
 			{
 				"name": "button3",
